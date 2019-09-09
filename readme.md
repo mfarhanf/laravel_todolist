@@ -1,27 +1,71 @@
-# Laravel PHP Framework
+# Laravel Todo List
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Simple Todo List Application.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Try using email "farhan@gmail.com" and password "secret".
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Installation
 
-## Official Documentation
+Please check the official Laravel 5.2 installation guide for server requirements before you start. [Official Documentation](https://laravel.com/docs/5.2)
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Clone the repository
 
-## Contributing
+    git clone git@github.com:mfarhanf/laravel_todolist.git
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Switch to the repo folder
 
-## Security Vulnerabilities
+    cd laravel_todolist
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Install all the dependencies using composer
 
-## License
+    composer install
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Copy the example env file and make the required configuration changes in the .env file
+
+    cp .env.example .env
+
+Generate key
+
+    php artisan key:generate
+
+Run database migration
+
+    php artisan migrate
+
+Run database seeder
+
+    php artisan db:seed
+
+**TL;DR command list**
+
+    git clone git@github.com:mfarhanf/laravel_todolist.git
+    cd laravel_todolist
+    composer install
+    cp .env.example .env
+    php artisan key:generate
+    php artisan migrate
+    php artisan db:seed
+
+## Run The Application
+
+Run Your server
+
+    php artisan serve
+
+Go to Login Page
+
+    http://localhost:8000/login
+
+Go to Home
+
+    http://localhost:8000/home
+
+## UnitTest
+
+Install sqlite
+
+    apt-get install sqlite3 libsqlite3-dev
+
+Run unit test
+
+    vendor/bin/phpunit
